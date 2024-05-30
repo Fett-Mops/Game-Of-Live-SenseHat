@@ -29,7 +29,7 @@ python3 GoL.py green
 ```
 and if you want to choose you own color u can do it like this
 ```python
-python3 GoL.py (r, g, b)
+python3 GoL.py r g b
 ```
 
 ## menuing
