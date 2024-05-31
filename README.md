@@ -92,11 +92,12 @@ by default the colors of the LED's are random but if you dont like that you can 
 python3 GoL.py blue
 ```
 list of Colors:
-<ul>
- <li>red</li>
- <li>blue</li>
- <li>green</li>
-</ul>
+
+ <a>red<span style="background-color:red"> </span></a>
+ .
+ <a>blue<span style="background-color:blue"> </span></a>
+ .
+ <a>green<span style="background-color:green"> </span></a>
 
 or if you wan to use your own color you can define the rgb values itself
 ```sh
