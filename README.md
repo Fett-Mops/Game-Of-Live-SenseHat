@@ -10,10 +10,7 @@
   <p align="center">
    Simulating Conways game of life on the sense HAT add-on for the raspberrypi
    <br/>
-   :warning:Has yet to be finished :warning: 
-    <br />
-    <a href="https://github.com/Fett-Mops/Game-Of-Live-SenseHat"><strong>Explore the docs »</strong></a>
-    <br />
+   :warning:Has yet to be finished :warning:
     <br />
     <a href="https://github.com/Fett-Mops/Game-Of-Live-SenseHat">View Demo</a>
     ·
