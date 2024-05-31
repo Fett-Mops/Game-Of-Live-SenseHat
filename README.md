@@ -88,17 +88,27 @@ heres how to run the programm
 python3 GoL.py
 ```
 by default the colors of the LED's are random but if you dont like that you can use a predefined color like this
+
 ```sh
 python3 GoL.py blue
 ```
-list of Colors:
-
- <a>red<span style="background-color:red"> </span></a>
- .
- <a>blue<span style="background-color:blue"> </span></a>
- .
- <a>green<span style="background-color:green"> </span></a>
-
+<div align = "center">
+  
+   red 🟥
+   blue 🟦
+   green 🟩
+   yellow 🟨
+   purple 🟪
+   white ⬜
+   orange 🟧
+   brown 🟫
+ </div>
+ brown [101, 67, 33]
+ yellow [255, 255, 0]
+ purple [106, 13, 173]
+ white [255, 255, 255]
+ orange [247, 152, 29]
+ 
 or if you wan to use your own color you can define the rgb values itself
 ```sh
 python3 GoL.py 130 200 177
