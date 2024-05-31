@@ -75,7 +75,7 @@ if you dont have git install it with this command
    ```sh
    git clone https://github.com/Fett-Mops/Game-Of-Live-SenseHat/
    ```
-2. Install NPM packages
+2. Install sense-hat
    ```sh
     sudo apt install sense-hat
    ```
@@ -105,7 +105,7 @@ or if you wan to use your own color you can define the rgb values itself
 ```sh
 python3 GoL.py 130 200 177
 ```
-## Menue
+### Menue
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
