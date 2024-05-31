@@ -90,7 +90,7 @@ heres how to run the programm
 ```sh
 python3 GoL.py
 ```
-by default the colors of the bits are random but if you dont like that you can use a predefined color like this
+by default the colors of the LED's are random but if you dont like that you can use a predefined color like this
 ```sh
 python3 GoL.py blue
 ```
