@@ -1,3 +1,4 @@
+#!usr/bin/python3
 from sense_hat import SenseHat
 from signal import pause
 import random
@@ -90,7 +91,7 @@ while True:
 
     if state_manager.orientation(sense.get_orientation()):
         state_manager = None
-        state_manager = State_manager()
+        state_manager = State_manager(sense, col)
         sense.set_pixels(clear)
 
     state_manager.acceleration(sense.get_accelerometer_raw())

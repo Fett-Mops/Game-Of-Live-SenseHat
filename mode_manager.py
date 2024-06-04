@@ -1,14 +1,16 @@
 from mode_move import Mode_move
+from secret import Start 
 
 dead = [0, 0, 0]
 
 class State_manager:
     def __init__(self, sense, col):
+        self.sense = sense
         self.events = []
         self.mode = "Home"
         self.random = False 
         self.grid = []
-        self.move_mode = Mode_move(sense, col)
+        self.move_mode = Mode_move(self.sense, col)
         self.index = 0
         self.home_bl = False
 
@@ -21,7 +23,6 @@ class State_manager:
             if self.mode != "Draw":
                 self.move_mode.active = False
             if event_tp == ("middle", "held") or self.home_bl:
-                print("jjj")
                 self.home(event_tp)
             else:
                 match self.mode :
@@ -36,13 +37,22 @@ class State_manager:
                             case ("right", "released"):
                                 self.mode = "Draw"
                                 self.move_mode.actve = True
+                            case ("left", "released"):
+                                print("found Easteregg")
+                                Start(self.sense)
+
                             case _: 
                                 print(event_tp, "Not implemented")
+                           
                 
+                        
+
                     case "Draw":
+                        prin("Draw")
                         self.move_mode.move(event_tp) 
                 
                     case "Prebuild":
+                        print("Prebuild")
                         pass
 
                     case "Running":
@@ -63,13 +73,13 @@ class State_manager:
             if acc[axis] >= abs(3):
                 print("random")
                 self.random = True
+
     def home(self, event_tp):
         self.home_bl = True
         if event_tp ==  ("middle", "released"):
             self.home_bl = False
         self.mode = "Home"
         self.events = []
-        print("jjj")
 
     def initShapes():
         return {"glider" : [dead, dead, dead, dead, dead, dead, dead, dead,
