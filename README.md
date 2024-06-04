@@ -117,15 +117,18 @@ or if you wan to use your own color you can define the rgb values itself
 python3 GoL.py 130 200 177
 ```
 ### Menue
+sssasadasda
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-#### secret
+
+### Secret
 in the secrete i would have done a rick roll yet it is very hard to recognize without the audio on a 8x8 display (it plays the audio if your earphones ar connected) 
 thats why i decidet to use the Bad Apple as an alternative. it is more recognizable because of the contrast( the whole video is black white). also i recomend to put a paper above the display because it blends the LED's thogether.
-here if you want to use ("Never Gonna Give You Up")[https://www.youtube.com/watch?v=dQw4w9WgXcQ] by Rick Astley
+here if you want to use ["Never Gonna Give You Up"](https://www.youtube.com/watch?v=dQw4w9WgXcQ) by Rick Astley
 ```sh
 python3 GoL.py Rick
 ```
-else it will play (Bad Apple) form ZUN.
+else it will play ["Bad Apple"](https://www.youtube.com/watch?v=FtutLA63Cp8) form ZUN.
 
 if there is someone who really wants to have there own video implemented write an issue or contact me in another way. i know how to implement that but i didnt fellt the need because i already have all the options i could wish for :)
 
