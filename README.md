@@ -106,11 +106,7 @@ python3 GoL.py blue
    orange 🟧
    brown 🟫
  </div>
- brown [101, 67, 33]
- yellow [255, 255, 0]
- purple [106, 13, 173]
- white [255, 255, 255]
- orange [247, 152, 29]
+
  
 or if you wan to use your own color you can define the rgb values itself
 ```sh
