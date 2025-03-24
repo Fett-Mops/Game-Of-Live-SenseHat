@@ -90,21 +90,23 @@ heres how to run the programm
 ```sh
 python3 GoL.py
 ```
-by default the colors of the LED's are random but if you dont like that you can use a predefined color like this
+by default the colors of the LED's are grey but if you dont like that you can use a predefined color like this
 
 ```sh
-python3 GoL.py blue
+python3 GoL.py -b
 ```
 <div align = "center">
   
-   red 🟥
-   blue 🟦
-   green 🟩
-   yellow 🟨
-   purple 🟪
-   white ⬜
-   orange 🟧
-   brown 🟫
+   -r 🟥 
+   -b 🟦
+   -g 🟩 
+   -y 🟨
+   -p 🟪
+   -w ⬜
+   -o 🟧
+   -b 🟫
+   -gr ⬜
+   -rgb 🌈
  </div>
 
  
@@ -113,18 +115,15 @@ or if you wan to use your own color you can define the rgb values itself
 python3 GoL.py 130 200 177
 ```
 ### Menue
-sssasadasda
+ok so you start in the Home menue. if you shake the raspi hard it randamizes the hole grid. now you can press the joistick to start simulation. press again to pause. if you want to reset the grid put the raspi on his had wait a bit and all the leds should be dead. if you press long you can go to home mode here or in pause mode you can enter with up prebuild mode here you can choose between diffrent prebuild shapes to simulate. with right you enter custom gird mode where you can move a curser wich is blinking in red and inverts the pixel underneth if you push the joistick in. to leav this mode you have to hold in the middle the joistick to go in home mode again in wich you can with a simple push simulate your grid. if you push left or down you get to the secred noted below.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Secret
 in the secrete i would have done a rick roll yet it is very hard to recognize without the audio on a 8x8 display (it plays the audio if your earphones ar connected) 
 thats why i decidet to use the Bad Apple as an alternative. it is more recognizable because of the contrast( the whole video is black white). also i recomend to put a paper above the display because it blends the LED's thogether.
-here if you want to use ["Never Gonna Give You Up"](https://www.youtube.com/watch?v=dQw4w9WgXcQ) by Rick Astley
-```sh
-python3 GoL.py Rick
-```
-else it will play ["Bad Apple"](https://www.youtube.com/watch?v=FtutLA63Cp8) form ZUN.
+here if you want to use ["Never Gonna Give You Up"](https://www.youtube.com/watch?v=dQw4w9WgXcQ) by Rick Astley you have to push the joistick down in the pause or home mode
+but if you push left it will play ["Bad Apple"](https://www.youtube.com/watch?v=FtutLA63Cp8) form ZUN.
 
 if there is someone who really wants to have there own video implemented write an issue or contact me in another way. i know how to implement that but i didnt fellt the need because i already have all the options i could wish for :)
 
