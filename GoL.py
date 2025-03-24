@@ -1,14 +1,17 @@
-#!usr/bin/python3
-from sense_hat import SenseHat
-from signal import pause
-import random
-
-import time
+#!/usr/bin/python3
 from mode_manager import State_manager
 from color import Color_handler as Ch 
 
+from sense_hat import SenseHat
+from signal import pause
+
+import random
+import time
+import curses
+
 sense = SenseHat()
 sense.set_imu_config(True, False, True)
+
 
 col = Ch.col(None)
 row = column = 8
@@ -39,7 +42,7 @@ def in_range(i, j, k) -> bool:
     
     
 def get_neighbour():
-    newBoard = []
+    new_board = []
     
     for i in range(row):
         for j in range(column):
@@ -80,29 +83,37 @@ sense.set_pixels(clear)
 state_manager = State_manager(sense, col)
 
 
-while True:
-    if state_manager.random:
-        sense.set_pixels(clear)
-        place(board, True)
-        state_manager.random = False
 
-    for event in sense.stick.get_events():
-        state_manager.add_Event(event)
-
-    if state_manager.orientation(sense.get_orientation()):
-        state_manager = None
-        state_manager = State_manager(sense, col)
-        sense.set_pixels(clear)
-
-    state_manager.acceleration(sense.get_accelerometer_raw())
-
-    if state_manager.mode == "Running":
-        board = get_neighbour()
-        time.sleep(.3)
-        sense.set_pixels(clear)
-        place(board)
-        print("running")
- 
+try:
+    while True:
 
 
 
+        if state_manager.random:
+            sense.set_pixels(clear)
+            place(board, True)
+            state_manager.random = False
+
+        for event in sense.stick.get_events():
+            state_manager.add_event(event)
+
+        if state_manager.orientation(sense.get_orientation()):
+            state_manager = None
+            state_manager = State_manager(sense, col)
+            sense.set_pixels(clear)
+
+        state_manager.acceleration(sense.get_accelerometer_raw())
+
+        if state_manager.mode == "Running":
+            board = get_neighbour()
+            time.sleep(.3)
+            sense.set_pixels(clear)
+            place(board)
+
+
+except Exception as e:
+        print(e)
+    
+        curses.endwin()
+finally:
+        curses.endwin()

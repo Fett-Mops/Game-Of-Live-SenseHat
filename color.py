@@ -2,36 +2,44 @@ import sys
 import random
 	
 class Color_handler():
-	def col(color):
-	    if color != None:
-	        if color == "random":
-	            return Color_handler.rC()
-	        return color
-	
-	
-	yellow 🟨 purple 🟪 white ⬜ orange 🟧 brown 🟫
-	    col_dic = {"red" : [255, 0, 0],
-	               "green" : [0, 255, 0],
-	               "blue" : [0, 0, 255],
-		       "yellow" : [255, 255, 0],
-		       "purple" : [160, 32, 240],
-		       "white" : [255, 255, 255],
-		       "orange" : [255, 165, 0],
-		       "brown" : [165, 42, 42]}
+    def col(color):
+        if color != None:
+            if color == "random":
+                return Color_handler.rC()
+            return color
+        
+        col_dic = {"-r" : [255, 0, 0],
+                   "-g" : [0, 255, 0],
+                   "-b" : [0, 0, 255],
+                   "-y" : [255, 255, 0],
+                   "-p" : [160, 32, 240],
+                   "-w" : [255, 255, 255],
+                   "-o" : [255, 165, 0],
+                   "-b" : [165, 42, 42],
+                   "-rgb" : "random"}
 
-	    #implement better error handeling
-	    syslen = len(sys.argv)
+        syslen = len(sys.argv)
 	
-	    if  syslen == 2:
-	        color = col_dic[sys.argv[1].lower_case()]
-	
-	    elif syslen == 4:
-	        color = [int(i) for i in sys.argv[1:]] 
-	
-	    else:
-	        color = "random" 
-	    return color
+        try:
+            if  syslen == 4:
+                try:
+                    color = [int(i) for i in sys.argv[1:]] 
+                except:
+                    print("input error: expects only int")
+
+            elif syslen == 2:
+                try:
+                    color = col_dic[sys.argv[1].lower()]
+                except:
+                    print("input error: expect value in {col_dic.keys()}, not {sys.argv[1]}")
+        
+            else:
+                color = [128, 128,128]
+        except:
+            color = [128, 128,128]
+
+        return color
 	 
 	                
-	def rC():
-	    return [random.randint(1,255) for i in range(3)]
+    def rC():
+        return [random.randint(1,255) for i in range(3)]

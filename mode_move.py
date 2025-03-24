@@ -8,7 +8,8 @@ class Mode_move():
         self.sense = sense
         self.col = col
         self.active = False
-        self.blinck_th = threading.Thread(target=self.blincking)
+        self.thread_on = False
+        self.blinck_th = threading.Thread(target=self.blincking, daemon = True)
         self.blinck_th.start()
         self.dead = [0,0,0]
         self.old_col =[0,0,0] 
@@ -48,18 +49,12 @@ class Mode_move():
                 self.thread_stopper = False
 
     def blincking(self):
-        print(self.col)
-        #while True:
-        while False:
-            if self.active is False:
-                self.blinck_th.running = False
-            else:
-                self.blinck_th.running = True
-            if self.thread_stopper is False:
-                print(self.old_col)
-                self.sense.set_pixel(self.cr_pos[0], self.cr_pos[1], self.rand_col)
-                time.sleep(.3)
-                self.sense.set_pixel(self.cr_pos[0], self.cr_pos[1], self.old_col)
-                time.sleep(.3)
+        while True:
+            if self.thread_on:
+                if self.thread_stopper is False:
+                    self.sense.set_pixel(self.cr_pos[0], self.cr_pos[1], self.rand_col)
+                    time.sleep(.3)
+                    self.sense.set_pixel(self.cr_pos[0], self.cr_pos[1], self.old_col)
 
+            time.sleep(.3)
     
