@@ -14,11 +14,11 @@ class State_manager:
         self.index = 0
         self.home_bl = False
 
-    def addEvent(self, event):
+    def add_event(self, event):
         self.events.append(event)
-        self.eventChecker(event)
+        self.event_checker(event)
     
-    def eventChecker(self, event ):
+    def event_checker(self, event ):
             event_tp = (event.direction, event.action) 
             if self.mode != "Draw":
                 self.move_mode.active = False
@@ -30,13 +30,11 @@ class State_manager:
                         match event_tp:
                             case ("middle", "released"):
                                 self.mode = "Running"
-
-                            case ("up", "released"):
-                                self.mode = "Prebuild"
                 
                             case ("right", "released"):
                                 self.mode = "Draw"
                                 self.move_mode.actve = True
+                                
                             case ("left", "released"):
                                 print("found Easteregg")
                                 Start(self.sense)
@@ -44,16 +42,9 @@ class State_manager:
                             case _: 
                                 print(event_tp, "Not implemented")
                            
-                
-                        
-
                     case "Draw":
                         prin("Draw")
                         self.move_mode.move(event_tp) 
-                
-                    case "Prebuild":
-                        print("Prebuild")
-                        pass
 
                     case "Running":
                         if event_tp == ("middle", "released"):
