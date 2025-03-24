@@ -20,7 +20,7 @@ color = None
 
    
 
-def place(board, rand=False):
+def place(board, rand=False) -> None:
     for i in range(row):
         for j in range(column):
             if (i,j) in board:
@@ -30,7 +30,7 @@ def place(board, rand=False):
                 sense.set_pixel(i, j, Ch.col(col))
     board = []
    
-def inRange(i,j,k)->bool:
+def in_range(i, j, k) -> bool:
         x = int(k[0]) + i
         y = int(k[1]) + j
         if - 1 < x < column and  - 1 < y < row:
@@ -38,7 +38,7 @@ def inRange(i,j,k)->bool:
         return False
     
     
-def getNeighbour():
+def get_neighbour():
     newBoard = []
     
     for i in range(row):
@@ -47,13 +47,13 @@ def getNeighbour():
             for k in [-1,0,1]:  
                 for m in [-1, 0, 1]:
                     if m != 0 or k != 0:
-                        if inRange(i, j, (k, m)):
+                        if in_range(i, j, (k, m)):
                             if sense.get_pixel(i+k, j+m) != dead:
                                 neighbours += 1
                             
             var = logic(i,j,neighbours)
-            newBoard.append(var)
-    return newBoard
+            new_board.append(var)
+    return new_board
                             
 
 def logic(i, j, neighbours):
@@ -87,7 +87,7 @@ while True:
         state_manager.random = False
 
     for event in sense.stick.get_events():
-        state_manager.addEvent(event)
+        state_manager.add_Event(event)
 
     if state_manager.orientation(sense.get_orientation()):
         state_manager = None
@@ -97,7 +97,7 @@ while True:
     state_manager.acceleration(sense.get_accelerometer_raw())
 
     if state_manager.mode == "Running":
-        board = getNeighbour()
+        board = get_neighbour()
         time.sleep(.3)
         sense.set_pixels(clear)
         place(board)
