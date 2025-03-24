@@ -41,10 +41,6 @@
         <li><a href="#menue">Menue</a></li>
     </li>
     <li><a href="#contributing">Contributing</a></li>
-
-
-    +
-
   </ol>
 </details>
 
@@ -77,7 +73,7 @@ if you dont have git install it with this command
    ```
 2. Install sense-hat
    ```sh
-    sudo apt install sense-hat
+    pip install -r requirements 
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
