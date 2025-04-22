@@ -102,7 +102,7 @@ python3 GoL.py -b
    -o 🟧
    -b 🟫
    -gr ⬜
-   -random 🌈
+   -rand 🌈
  </div>
 
 ### Menue
