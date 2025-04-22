@@ -102,21 +102,16 @@ python3 GoL.py -b
    -o 🟧
    -b 🟫
    -gr ⬜
-   -rgb 🌈
+   -random 🌈
  </div>
 
- 
-or if you wan to use your own color you can define the rgb values itself
-```sh
-python3 GoL.py 130 200 177
-```
 ### Menue
 ok so you start in the Home menue. if you shake the raspi hard it randamizes the hole grid. now you can press the joistick to start simulation. press again to pause. if you want to reset the grid put the raspi on his had wait a bit and all the leds should be dead. if you press long you can go to home mode here or in pause mode you can enter with up prebuild mode here you can choose between diffrent prebuild shapes to simulate. with right you enter custom gird mode where you can move a curser wich is blinking in red and inverts the pixel underneth if you push the joistick in. to leav this mode you have to hold in the middle the joistick to go in home mode again in wich you can with a simple push simulate your grid. if you push left or down you get to the secred noted below.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Secret
-in the secrete i would have done a rick roll yet it is very hard to recognize without the audio on a 8x8 display (it plays the audio if your earphones ar connected) 
+In the secrete i would have done a rick roll yet it is very hard to recognize without the audio on a 8x8 display (it plays the audio if your earphones ar connected) 
 thats why i decidet to use the Bad Apple as an alternative. it is more recognizable because of the contrast( the whole video is black white). also i recomend to put a paper above the display because it blends the LED's thogether.
 here if you want to use ["Never Gonna Give You Up"](https://www.youtube.com/watch?v=dQw4w9WgXcQ) by Rick Astley you have to push the joistick down in the pause or home mode
 but if you push left it will play ["Bad Apple"](https://www.youtube.com/watch?v=FtutLA63Cp8) form ZUN.
