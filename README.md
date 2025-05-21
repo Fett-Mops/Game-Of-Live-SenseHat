@@ -2,7 +2,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/Fett-Mops/Game-Of-Live-SenseHat">
-    <img src="logo.png" alt="Logo" width="80" height="80">
+    <img src="img/logo.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Game of Live Sense HAT</h3>
@@ -47,16 +47,16 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/il.png" alt="HAT" width="80" height="80">
+  <a >
+    <img src="images/hat.png" alt="HAT" width="80" height="80">
   </a>
 
-This project is about a Game of Life Simulation with SenseHat on Raspberrypi. The more sensores i discovered on the modul the more i wanted to use so the menuing isnt very intuitive but i wanted to build in some of the sensores it had. Also i thougth it would be a good idea to start with learning to use multithreading but as you can see i couldnt go in verry deep.
+This project is about a Game of Life Simulation with SenseHat on Raspberrypi. The more sensores i discovered on the modul the more i wanted to use them and so i did. Also i thougth it would be a good idea to start with learning to use multithreading but as you can see i couldnt go in verry deep.
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-Before you start you need to connect the [raspberry pi](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/) to the internet and isnstall the [Sense HAT](https://www.raspberrypi.com/products/sense-hat/) module.
+Before you start you need to connect the [raspberry pi](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/) to the internet and install the [Sense HAT](https://www.raspberrypi.com/products/sense-hat/) module.
 
 ### Prerequisites
 
@@ -111,12 +111,12 @@ ok so you start in the Home menue. if you shake the raspi hard it randamizes the
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Secret
-In the secrete i would have done a rick roll yet it is very hard to recognize without the audio on a 8x8 display (it plays the audio if your earphones ar connected) 
-thats why i decidet to use the Bad Apple as an alternative. it is more recognizable because of the contrast( the whole video is black white). also i recomend to put a paper above the display because it blends the LED's thogether.
+In the secrete i would have done a rick roll yet it is very hard to recognize without the audio on a 8x8 display (it plays the audio if your earphones are connected) 
+thats why i decidet to use the Bad Apple as an alternative. it is more recognizable because of the contrast( the whole video is black&white). Also i recomend to put a paper above the display because it blends the LED's thogether.
 here if you want to use ["Never Gonna Give You Up"](https://www.youtube.com/watch?v=dQw4w9WgXcQ) by Rick Astley you have to push the joistick down in the pause or home mode
 but if you push left it will play ["Bad Apple"](https://www.youtube.com/watch?v=FtutLA63Cp8) form ZUN.
 
-if there is someone who really wants to have there own video implemented write an issue or contact me in another way. i know how to implement that but i didnt fellt the need because i already have all the options i could wish for :)
+if there is someone who really wants to have there own video implemented write an issue or contact me in another way. I know how to implement that but i didnt fellt the need because i already have all the options i could wish for :) or you can do it yourself by modifying the code and convert a mp4 to frames via vid_to_frames.py.
 
 
 
